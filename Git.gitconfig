@@ -1,0 +1,32 @@
+[credential]
+	helper = manager
+[core]
+	editor = \"C:/Program Files/Microsoft VS Code/code.exe\" --wait
+	autocrlf = false
+	filemode = false
+[user]
+	name = Sam W
+	email = twopizza9621536@gmail.com
+[merge]
+	guitool = vscode
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+[diff]
+	guitool = vscode
+[difftool "vscode"]
+	cmd = \"C:/Program Files/Microsoft VS Code/Code.exe\" --wait --diff \"$LOCAL\" \"$REMOTE\"
+	path = C:/Program Files/Microsoft VS Code/Code.exe
+[mergetool "vscode"]
+	cmd = \"C:/Program Files/Microsoft VS Code/Code.exe\" --wait \"$MERGED\"
+	path = C:/Program Files/Microsoft VS Code/Code.exe
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[color]
+	ui = true
