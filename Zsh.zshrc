@@ -68,7 +68,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(tmux, vi-mode, dnf, fzf, vscode, git, emoji, python, pip, gpg-agent, gnu-utils, man, ipfs, node, npm, dotnet)
+plugins=(tmux vi-mode dnf fzf vscode git emoji python pip gpg-agent gnu-utils man node npm dotnet)
 
 source $ZSH/oh-my-zsh.sh
 
