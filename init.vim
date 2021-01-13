@@ -32,6 +32,7 @@ Plug 'nickspoons/vim-sharpenup'
 Plug 'justinmk/vim-sneak'
 Plug 'bkad/CamelCaseMotion'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'wakatime/vim-wakatime'
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
@@ -134,7 +135,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
+
 endif
 
 
@@ -203,15 +204,15 @@ let g:NERDTreeGitStatusWithFlags = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusNodeColorization = 1
 let g:NERDTreeColorMapCustom = {
-    \ "Staged"    : "#0ee375",  
-    \ "Modified"  : "#d9bf91",  
-    \ "Renamed"   : "#51C9FC",  
-    \ "Untracked" : "#FCE77C",  
-    \ "Unmerged"  : "#FC51E6",  
-    \ "Dirty"     : "#FFBD61",  
-    \ "Clean"     : "#87939A",   
-    \ "Ignored"   : "#808080"   
-    \ }                         
+    \ "Staged"    : "#0ee375",
+    \ "Modified"  : "#d9bf91",
+    \ "Renamed"   : "#51C9FC",
+    \ "Untracked" : "#FCE77C",
+    \ "Unmerged"  : "#FC51E6",
+    \ "Dirty"     : "#FFBD61",
+    \ "Clean"     : "#87939A",
+    \ "Ignored"   : "#808080"
+    \ }
 
 let g:NERDTreeIgnore = ['^node_modules$']
 
@@ -235,7 +236,7 @@ noremap Y y$
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
-function! IsNERDTreeOpen()        
+function! IsNERDTreeOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
@@ -256,9 +257,9 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
-  \ 'coc-json', 
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
   \ 'coc-marketplace',
   \ 'coc-java',
   \ 'coc-html',
@@ -298,6 +299,7 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-ccls',
   \ 'coc-word',
+  \ 'coc-rainbow-fart',
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.
@@ -446,19 +448,19 @@ vnoremap <C-C> "+y
 vnoremap <C-Insert> "+y
 
 " CTRL-V and SHIFT-Insert are Paste
-map <C-V>		"+gP
-map <S-Insert>		"+gP
-imap <C-V>		<Esc>"+gpa
+map <C-V>       "+gP
+map <S-Insert>      "+gP
+imap <C-V>      <Esc>"+gpa
 
-cmap <C-V>		<C-R>+
-cmap <S-Insert>		<C-R>+
+cmap <C-V>      <C-R>+
+cmap <S-Insert>     <C-R>+
 
 
-imap <S-Insert>		<C-V>
-vmap <S-Insert>		<C-V>
+imap <S-Insert>     <C-V>
+vmap <S-Insert>     <C-V>
 
 " Use CTRL-Q to do what CTRL-V used to do
-noremap <C-Q>		<C-V>
+noremap <C-Q>       <C-V>
 
 " set 'selection', 'selectmode', 'mousemodel' and 'keymodel' for MS-Windows
 behave mswin
@@ -470,9 +472,9 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 vnoremap <BS> d
 
 " Use CTRL-S for saving, also in Insert mode
-noremap <C-S>		:update<CR>
-vnoremap <C-S>		<C-C>:update<CR>
-inoremap <C-S>		<C-O>:update<CR>
+noremap <C-S>       :update<CR>
+vnoremap <C-S>      <C-C>:update<CR>
+inoremap <C-S>      <C-O>:update<CR>
 
 " CTRL-Z is Undo; not in cmdline though
 noremap <C-Z> u
