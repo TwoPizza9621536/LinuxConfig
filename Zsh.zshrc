@@ -112,9 +112,6 @@ function kdesrc-run
 }
 #################################################################
 
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
 
 /opt/intel/bin/setvars.sh intel64
