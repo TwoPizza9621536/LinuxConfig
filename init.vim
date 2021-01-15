@@ -39,6 +39,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'bkad/CamelCaseMotion'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wakatime/vim-wakatime'
+Plug 'Rasukarusan/vim-block-paste'
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
