@@ -52,6 +52,10 @@ OSH_THEME="agnoster"
 completions=(
   git
   ssh
+  pip
+  pip3
+  bundle
+  gem
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
