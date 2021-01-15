@@ -82,13 +82,16 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 
-
 "" Fix backspace indent
 set backspace=indent,eol,start
 
+"" set indentation
+set autoindent
+filetype plugin indent on
+
 "" Tabs. May be overridden by autocmd rules
-set tabstop=4
-set softtabstop=0
+set tabstop=8
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 
@@ -145,10 +148,9 @@ else
 endif
 
 
-
 "" Disable the blinking cursor.
-set gcr=a:blinkon0
-set scrolloff=3
+"" set gcr=a:blinkon0
+"" set scrolloff=3
 
 "" Status bar
 set laststatus=2
