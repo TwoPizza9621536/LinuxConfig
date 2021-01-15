@@ -1,5 +1,7 @@
+neofetch
+
 # Path to your oh-my-bash installation.
-export OSH=/home/samuel/.oh-my-bash
+export OSH=/home/samgo/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
@@ -100,4 +102,21 @@ source $OSH/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-neofetch
+# kdesrc-build ##################################################
+
+## Add kdesrc-build to PATH
+export PATH="$HOME/kde/src/kdesrc-build:$PATH"
+
+## Run projects built with kdesrc-build
+function kdesrc-run
+{
+  source "$HOME/kde/build/$1/prefix.sh" && "$HOME/kde/usr/bin/$@"
+}
+#################################################################
+
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+
+export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
+
+/opt/intel/bin/setvars.sh intel64
