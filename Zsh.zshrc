@@ -113,6 +113,3 @@ function kdesrc-run
 #################################################################
 
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
-
-/opt/intel/bin/setvars.sh intel64
-
