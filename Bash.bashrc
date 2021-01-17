@@ -1,5 +1,3 @@
-neofetch
-
 # Path to your oh-my-bash installation.
 export OSH=/home/samgo/.oh-my-bash
 
@@ -119,4 +117,6 @@ function kdesrc-run
 }
 #################################################################
 
-export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+
+neofetch
