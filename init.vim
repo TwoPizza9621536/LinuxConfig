@@ -1,9 +1,3 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " Specify a directory for plugins
 call plug#begin('~/.nvim/plugged')
 
@@ -110,8 +104,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-set fileformats=dos,unix,mac
-
 " session management
 let g:session_directory = "~/.config/nvim/session"
 let g:session_autoload = "no"
@@ -132,7 +124,13 @@ set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
 
-set guifont=Caskaydia\ Cove\ Nerd\ Font 12
+if has('win32')
+    set guifont=Caskaydia\ Cove\ Nerd\ Font 12
+    set fileformats=dos,unix,mac
+else
+    set guifont=Caskaydia_Cove_Nerd_Font:h12
+    set fileformats=unix,dos,mac
+endif
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
@@ -211,7 +209,6 @@ nmap ++ <plug>NERDCommenterToggle
 let g:NERDTreeGitStatusWithFlags = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusNodeColorization = 1
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:NERDTreeColorMapCustom = {
     \ "Staged"    : "#0ee375",
     \ "Modified"  : "#d9bf91",
@@ -305,7 +302,7 @@ let g:coc_global_extensions = [
   \ 'coc-calc',
   \ 'coc-browser',
   \ ]
-  
+
 " from readme
 " if hidden is not set, TextEdit might fail.
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
