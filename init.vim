@@ -131,7 +131,8 @@ let no_buffers_menu=1
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
-set gfn=Monospace\ 10
+
+set guifont=Caskaydia\ Cove\ Nerd\ Font 12
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
