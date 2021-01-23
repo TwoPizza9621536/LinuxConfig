@@ -19,7 +19,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdcommenter'
-Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'OmniSharp/omnisharp-vim'
@@ -41,6 +40,9 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wakatime/vim-wakatime'
 Plug 'Rasukarusan/vim-block-paste'
 Plug 'junegunn/vim-plug'
+Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
+
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
@@ -132,9 +134,11 @@ set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
 
+set guifont=Caskaydia_Cove_Nerd_Font:h12
+
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
+    set guifont=Caskaydia_Cove_Nerd_Font:h12
     set transparency=7
   endif
 else
@@ -206,13 +210,10 @@ nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
-" open NERDTree automatically
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * NERDTree
-
 let g:NERDTreeGitStatusWithFlags = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusNodeColorization = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:NERDTreeColorMapCustom = {
     \ "Staged"    : "#0ee375",
     \ "Modified"  : "#d9bf91",
@@ -243,21 +244,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " act more like C or D because by default, Y yanks the current line (i.e. the
 " same as yy).
 noremap Y y$
-
-" sync open file with NERDTree
-" " Check if NERDTree is open or active
-function! IsNERDTreeOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
 
 " Highlight currently open buffer in NERDTree
 autocmd BufEnter * call SyncTree()
@@ -444,7 +430,8 @@ let g:lightline = {
 \ },
 \ 'component': {
 \   'sharpenup': sharpenup#statusline#Build()
-\ }
+\ },
+\ 'colorscheme': 'wombat',
 \}
 
 " copied from Vim 7.3's mswin.vim:
