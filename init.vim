@@ -83,7 +83,6 @@ set autoread
 "*****************************************************************************"
 "" Encoding
 set encoding=utf-8
-set fileencoding=utf-8
 set fileencodings=utf-8
 
 "" Fix backspace indent
@@ -244,9 +243,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " act more like C or D because by default, Y yanks the current line (i.e. the
 " same as yy).
 noremap Y y$
-
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
 
 " coc config
 let g:coc_global_extensions = [
