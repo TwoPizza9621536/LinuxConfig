@@ -257,6 +257,7 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-highlight',
   \ 'coc-git',
+  \ 'coc-clangd',
   \ 'coc-fsharp',
   \ 'coc-css',
   \ 'coc-cmake',
@@ -271,8 +272,6 @@ let g:coc_global_extensions = [
   \ 'coc-markdownlint',
   \ 'coc-json',
   \ 'coc-xml',
-  \ 'coc-utils',
-  \ 'coc-template',
   \ 'coc-syntax',
   \ 'coc-yaml',
   \ 'coc-tslint',
@@ -292,7 +291,22 @@ let g:coc_global_extensions = [
   \ 'coc-ccls',
   \ 'coc-word',
   \ 'coc-rainbow-fart',
+  \ 'coc-fzf-preview',
+  \ 'coc-discord',
+  \ 'coc-go',
+  \ 'coc-svg',
+  \ 'coc-sh',
+  \ 'coc-toml',
+  \ 'coc-rome',
+  \ 'coc-python',
+  \ 'coc-tabnine',
+  \ 'coc-yaml',
+  \ 'coc-cmake',
+  \ 'coc-diagnostic',
+  \ 'coc-calc',
+  \ 'coc-browser',
   \ ]
+  
 " from readme
 " if hidden is not set, TextEdit might fail.
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
