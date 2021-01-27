@@ -117,6 +117,7 @@ syntax on
 set ruler
 set number
 set relativenumber
+set virtualedit=all
 
 let no_buffers_menu=1
 
