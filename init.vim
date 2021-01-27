@@ -125,11 +125,16 @@ set t_Co=256
 set guioptions=egmrti
 
 if has('win32')
-    set guifont=Caskaydia\ Cove\ Nerd\ Font 12
-    set fileformats=dos,unix,mac
-else
     set guifont=Caskaydia_Cove_Nerd_Font:h12
-    set fileformats=unix,dos,mac
+    set fileformats=dos,unix,mac
+elseif has('unix')
+    if has('mac')    
+        set guifont=Caskaydia_Cove_Nerd_Font:h12
+        set fileformats=unix,dos,mac
+    else
+        set guifont=Caskaydia\ Cove\ Nerd\ Font 12
+        set fileformats=unix,dos,mac
+    endif
 endif
 
 if has("gui_running")
