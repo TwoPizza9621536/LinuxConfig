@@ -119,7 +119,7 @@ set ruler
 set number
 set relativenumber
 set virtualedit=all
-highlight=80
+set colorcolumn=80
 
 let no_buffers_menu=1
 
