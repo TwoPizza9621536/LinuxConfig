@@ -36,7 +36,8 @@ Plug 'Rasukarusan/vim-block-paste'
 Plug 'junegunn/vim-plug'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
-
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
