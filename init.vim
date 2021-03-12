@@ -248,6 +248,9 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " same as yy).
 noremap Y y$
 
+" All the languages Kite supports
+let g:kite_supported_languages = ['*']
+
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
