@@ -1,2 +1,2 @@
 # LinuxConfig
-My Linux configuration files.
+My Linux and Windows configuration files. Mostly Linux.
