@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo hostnamectl set-hostname fedoravm
+sudo hostnamectl set-hostname fedora-vm
 
 echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
 echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
