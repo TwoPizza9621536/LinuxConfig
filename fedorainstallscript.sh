@@ -25,7 +25,7 @@ sudo dnf groupupdate core -y
 
 sudo dnf group install --with-optional "Administration Tools" "Audio Production" "Multimedia" "Authoring and Publishing" "C Development Tools and Libraries" "Container Management" "D Development Tools and Libraries" "Design Suite" "Development Tools" "Fedora Eclipse" "Editors" "Educational Software" "LibreOffice" "Office/Productivity" "Python Classroom" "Python Science" "Text-based Internet" "Window Managers" "GNOME Desktop Environment" "Graphical Internet" "KDE (K Desktop Environment)" "Fonts" "Games and Entertainment" "Sound and Video" "System Tools" "KDE Plasma Workspaces" "Minimal Install" "Development and Creative Workstation" "Basic Desktop" "Fedora Workstation" "Xfce Desktop" "Fedora Custom Operating System" --best --allowerasing --skip-broken -y
 
-sudo dnf install neofetch htop fftw* gstreamer* timeshift* lame* cmake* mono* gdb* *keyring* lib* dotnet* gtk* wx* ruby-* SDL-* glfw-* allegro-* llvm* clang* mpfr-* cloog-* isl-* tex* make bison gmp-* libmpc-* flex ccache R-* qt* kf* kde* mingw* node* python2 python3 pip* npm gcc* ldc ghc* tex* gnome* *util* zsh* dnf* --best --allowerasing --skip-broken -y
+sudo dnf install neofetch htop fftw* gstreamer* timeshift* lame* cmake* mono* gdb* *keyring* lib* dotnet5* dotnet3* dotnet2* gtk* wx* ruby-* SDL-* glfw-* allegro-* llvm* clang* mpfr-* cloog-* isl-* tex* make bison gmp-* libmpc-* flex ccache R-* qt* kf* kde* mingw* node* python2 python3 pip* npm gcc* ldc ghc* tex* gnome* *util* zsh* dnf* --best --allowerasing --skip-broken -y
 
 sudo rpm --import https://repos.codelite.org/CodeLite.asc
 sudo rpm -Uvh https://repos.codelite.org/rpms-15.0/fedora/33/codelite-15.0.1-1.fc33.x86_64.rpm
