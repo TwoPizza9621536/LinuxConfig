@@ -222,4 +222,6 @@ function kdesrc-run
 
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 neofetch
