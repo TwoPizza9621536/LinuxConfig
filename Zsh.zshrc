@@ -196,28 +196,6 @@ export LANG=en_US.UTF-8
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
-# kdesrc-build ##################################################
-
-
-
-## Add kdesrc-build to PATH
-
-export PATH="$HOME/kde/src/kdesrc-build:$PATH"
-
-
-
-## Run projects built with kdesrc-build
-
-function kdesrc-run
-
-{
-
-  source "$HOME/kde/build/$1/prefix.sh" && "$HOME/kde/usr/bin/$@"
-
-}
-
 #################################################################
 
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
