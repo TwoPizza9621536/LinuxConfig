@@ -38,3 +38,5 @@ sudo dnf upgrade -y
 sudo dnf autoremove -y
 
 sudo dnf remove --duplicates -y
+
+sudo dnf reinstall *-google-*-fonts -y
