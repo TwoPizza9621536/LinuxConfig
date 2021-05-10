@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+nocolor=$(tput op)
+
 if [[ "$(id -u)" -ne 0 ]]; then
   printf '%s\n' "$errcolor" "You must run this script as root.$nocolor" \
       "${errcolor}Either use sudo or 'su -c ${0}'$nocolor"
