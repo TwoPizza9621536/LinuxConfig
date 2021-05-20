@@ -19,7 +19,7 @@ echo 'max_parallel_downloads=10' | tee -a /etc/dnf/dnf.conf
 echo 'deltarpm=true' | tee -a /etc/dnf/dnf.conf
 echo 'repo_gpgcheck=1' | tee -a /etc/dnf/dnf.conf
 
-dnf install https://github.com/pnmougel/meow/raw/master/release/meow-0.0.1-1.noarch.rpm
+dnf install https://github.com/pnmougel/meow/raw/master/release/meow-0.0.1-1.noarch.rpm -y
 
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 cat << EOF | tee /etc/yum.repos.d/vscode.repo
@@ -97,7 +97,7 @@ python3-glusterfs-api -x python3-py-bcrypt -x python3-readability -x python3-ipm
 edk2-tools-python -x python3-fiona -y
 
 rpm --import https://repos.codelite.org/CodeLite.asc
-dnf install https://repos.codelite.org/rpms-15.0/fedora/33/codelite-15.0.1-1.fc33.x86_64.rpm
+dnf install https://repos.codelite.org/rpms-15.0/fedora/33/codelite-15.0.1-1.fc33.x86_64.rpm -y
 
 dnf upgrade refresh -y
 
