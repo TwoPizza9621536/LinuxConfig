@@ -22,7 +22,7 @@ echo 'repo_gpgcheck=1' | tee -a /etc/dnf/dnf.conf
 dnf install https://github.com/pnmougel/meow/raw/master/release/meow-0.0.1-1.noarch.rpm
 
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
-cat << EOF | tee -a /etc/yum.repos.d/vscode.repo
+cat << EOF | tee /etc/yum.repos.d/vscode.repo
 [code]
 name=Visual Studio Code
 baseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1
@@ -30,7 +30,7 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 
 EOF
-curl https://packages.microsoft.com/config/fedora/34/prod.repo | tee -a \
+curl https://packages.microsoft.com/config/fedora/34/prod.repo | tee \
 /etc/yum.repos.d/microsoft-prod.repo
 
 rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg 
@@ -46,17 +46,17 @@ gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 EOF
 
 rpm --import https://www.virtualbox.org/download/oracle_vbox.asc
-curl https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo | tee -a \
+curl https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo | tee \
 /etc/yum.repos.d/virtualbox.repo
 
 rpm --import "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
-curl https://download.mono-project.com/repo/centos8-stable.repo | tee -a \
+curl https://download.mono-project.com/repo/centos8-stable.repo | tee \
 /etc/yum.repos.d/mono-centos8-stable.repo
 
 curl https://cli.github.com/packages/rpm/gh-cli.repo | tee -a /etc/yum.repos.d/gh-cli.repo
 
 rm -vf /etc/yum.repos.d/bintray-rpm.repo
-curl https://www.scala-sbt.org/sbt-rpm.repo | tee -a /etc/yum.repos.d/sbt-rpm.repo
+curl https://www.scala-sbt.org/sbt-rpm.repo | tee /etc/yum.repos.d/sbt-rpm.repo
 
 dnf check-update
 
