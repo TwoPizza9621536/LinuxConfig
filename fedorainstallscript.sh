@@ -19,6 +19,8 @@ echo 'max_parallel_downloads=10' | tee -a /etc/dnf/dnf.conf
 echo 'deltarpm=true' | tee -a /etc/dnf/dnf.conf
 echo 'repo_gpgcheck=1' | tee -a /etc/dnf/dnf.conf
 
+dnf install https://github.com/pnmougel/meow/raw/master/release/meow-0.0.1-1.noarch.rpm
+
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 cat << EOF | tee -a /etc/yum.repos.d/vscode.repo
 [code]
@@ -81,7 +83,7 @@ virtualbox* gparted vlc mpv gimp* haroopad ffmpeg* fftw* gstreamer* timeshift* l
 mono-basic mono-addins gdb* *keyring* dotnet5* dotnet-sdk* gtk* wx* ruby-* SDL-* glfw-* allegro-* llvm* clang* \
 mpfr-* cloog-* isl-* tex* make bison* gmp-* libmpc-* flex* ccache* R-* qt* kf* kde* mingw* node* pip* npm* gcc* \
 ldc* ghc* tex* gnome* rust* coreutil* binutil* zsh* dnf* qemu* mscore* pipy* vscodium *rpm* *curl* \
-*kleo* fedy -b --allowerasing --skip-broken -y
+*kleo* fedy inkscape* scribus* -b --allowerasing --skip-broken -y
 
 dnf install *lib* -b --allowerasing --skip-broken -x libcouchbase-tools -x xorg-x11-drv-nvidia-390xx-libs -x \
 glibc-headers-s390 -x xorg-x11-drv-nvidia-390xx-cuda-libs -x libblocksruntime-devel -x \
@@ -94,7 +96,7 @@ python3-glusterfs-api -x python3-py-bcrypt -x python3-readability -x python3-ipm
 edk2-tools-python -x python3-fiona -y
 
 rpm --import https://repos.codelite.org/CodeLite.asc
-rpm -Uvh https://repos.codelite.org/rpms-15.0/fedora/33/codelite-15.0.1-1.fc33.x86_64.rpm
+dnf install https://repos.codelite.org/rpms-15.0/fedora/33/codelite-15.0.1-1.fc33.x86_64.rpm
 
 dnf upgrade refresh -y
 
