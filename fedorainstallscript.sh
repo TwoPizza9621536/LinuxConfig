@@ -12,12 +12,14 @@ if ! type curl >/dev/null 2>&1; then
   dnf -y install curl libcurl
 fi
 
-hostnamectl set-hostname fedora-vm
-
-echo 'fastestmirror=1' | tee -a /etc/dnf/dnf.conf
-echo 'max_parallel_downloads=10' | tee -a /etc/dnf/dnf.conf
-echo 'deltarpm=true' | tee -a /etc/dnf/dnf.conf
-echo 'repo_gpgcheck=1' | tee -a /etc/dnf/dnf.conf
+if [ ! -z $(grep "repo_gpgcheck=1" "/etc/dnf/dnf.conf") ]; then
+  :
+else
+  echo 'fastestmirror=1' | tee -a /etc/dnf/dnf.conf
+  echo 'max_parallel_downloads=10' | tee -a /etc/dnf/dnf.conf
+  echo 'deltarpm=true' | tee -a /etc/dnf/dnf.conf
+  echo 'repo_gpgcheck=1' | tee -a /etc/dnf/dnf.conf
+if
 
 dnf install https://github.com/pnmougel/meow/raw/master/release/meow-0.0.1-1.noarch.rpm -y
 
