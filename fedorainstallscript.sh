@@ -86,7 +86,7 @@ virtualbox* gparted vlc mpv gimp* haroopad ffmpeg* fftw* gstreamer* timeshift* l
 mono-basic mono-addins gdb* *keyring* dotnet5* dotnet-sdk* gtk* wx* ruby-* SDL-* glfw-* allegro-* llvm* clang* \
 mpfr-* cloog-* isl-* tex* make bison* gmp-* libmpc-* flex* ccache* R-* qt* kf* kde* mingw* node* pip* npm* gcc* \
 ldc* ghc* tex* gnome* rust* coreutil* binutil* zsh* dnf* qemu* mscore* pypy* vscodium *rpm* *curl* \
-*kleo* fedy inkscape* scribus* wine* -b --allowerasing --skip-broken -y
+*kleo* fedy inkscape* scribus* wine* aria* -b --allowerasing --skip-broken -y
 
 dnf install *lib* -b --allowerasing --skip-broken -x libcouchbase-tools -x xorg-x11-drv-nvidia-390xx-libs -x \
 glibc-headers-s390 -x xorg-x11-drv-nvidia-390xx-cuda-libs -x libblocksruntime-devel -x \
