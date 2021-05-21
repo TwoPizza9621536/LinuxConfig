@@ -34,7 +34,7 @@ EOF
 curl https://packages.microsoft.com/config/fedora/34/prod.repo | tee \
 /etc/yum.repos.d/microsoft-prod.repo
 
-rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg 
+rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 cat << EOF | tee -a /etc/yum.repos.d/vscodium.repo
 [gitlab.com_paulcarroty_vscodium_repo]
 name=gitlab.com_paulcarroty_vscodium_repo
@@ -83,7 +83,7 @@ zstd* fzf* vtk* maven* ant* *java* code google-*-fonts fira-code-fonts cascadia-
 virtualbox* gparted vlc mpv gimp* haroopad ffmpeg* fftw* gstreamer* timeshift* lame* cmake* mono-complete \
 mono-basic mono-addins gdb* *keyring* dotnet5* dotnet-sdk* gtk* wx* ruby-* SDL-* glfw-* allegro-* llvm* clang* \
 mpfr-* cloog-* isl-* tex* make bison* gmp-* libmpc-* flex* ccache* R-* qt* kf* kde* mingw* node* pip* npm* gcc* \
-ldc* ghc* tex* gnome* rust* coreutil* binutil* zsh* dnf* qemu* mscore* pipy* vscodium *rpm* *curl* \
+ldc* ghc* tex* gnome* rust* coreutil* binutil* zsh* dnf* qemu* mscore* pypy* vscodium *rpm* *curl* \
 *kleo* fedy inkscape* scribus* -b --allowerasing --skip-broken -y
 
 dnf install *lib* -b --allowerasing --skip-broken -x libcouchbase-tools -x xorg-x11-drv-nvidia-390xx-libs -x \
