@@ -1,3 +1,4 @@
-Import-Module posh-git
+try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
 Import-Module oh-my-posh
-Set-PoshPrompt agnoster
+Import-Module posh-git
+Set-PoshPrompt -Theme agnoster
