@@ -1,4 +1,2 @@
-try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
-Import-Module oh-my-posh
-Import-Module posh-git
-Set-PoshPrompt -Theme agnoster
+Set-Alias winfetch pwshfetch-test-1
+winfetch
