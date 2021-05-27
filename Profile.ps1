@@ -1,3 +1,2 @@
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-PoshPrompt agnoster
+Set-Alias winfetch pwshfetch-test-1
+winfetch
