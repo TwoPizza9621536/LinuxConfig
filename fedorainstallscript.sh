@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# This part is from rocky linux conversion script
 errcolor=$(tput setaf 1)
 nocolor=$(tput op)
 blue=$(tput setaf 4)
