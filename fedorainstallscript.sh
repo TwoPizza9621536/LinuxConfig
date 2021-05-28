@@ -96,8 +96,6 @@ declare -a groups=("gnome*" "workstation-product*" "base-x" "basic*" "firefox"
 "design-suite" "lxqt*" "lxde*" "input-methods" "deepin*" "critical*"
 "xmonad*" "sugar*" "pantheon-desktop")
 
-echo "${groups}"
-
 for val in "${groups[@]}"; do
   dnf group install --with-optional $val -b --allowerasing --skip-broken -y
 done
@@ -118,8 +116,6 @@ declare -a packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*"
 "*expat*" "*fftw*" "*erlang*" "*Gtk*" "ncurses*" "*ocaml*" "PackageKit*"
 "*codeblocks*" "*mysql*" "*dbus*" "*glib*" "*fluidsynth*" "*flac*" "*glade*"
 "*ibus*" "*lame*" "*zlib*" "*nautilus*")
-
-echo "${packages}"
 
 for val in "${packages[@]}"; do
   dnf install $val -b --allowerasing --skip-broken -y
