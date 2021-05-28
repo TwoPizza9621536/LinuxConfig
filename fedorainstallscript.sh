@@ -85,7 +85,16 @@ dnf copr enable rpmsoftwaremanagement/dnf-nightly
 
 dnf update --refresh -y
 
-declare -a groups=(gnome* workstation-product-environment custom-environment i3* basic* kde* xfce* anaconda-tools base-x firefox libreoffice workstation-product x86-baremetal-tools multimedia core *fonts* hardware-support admin-tools audio authoring-and-publishing basic-desktop buildsys-build cinnamon* developer-workstation-environment *development* system-tools sound-and-video games kde-desktop graphical-internet window-managers virtualization tomcat standard ruby rubyonrails php python* ocaml mongodb mysql mingw32 mate* perl* java* graphics haskell eclipse fedora-packager design-suite)
+declare -a groups=("gnome*" "workstation-product*" "base-x" "basic*" "firefox"
+"custom-environment" "i3*" "kde*" "xfce*" "anaconda-tools" "*office*"
+"x86-baremetal-tools multimedia" "core" "*fonts*" "hardware-support" "games"
+"admin-tools" "audio" "authoring-and-publishing" "buildsys-build" "cinnamon*"
+"developer-workstation-environment" "*development*" "system-tools" "standard"
+"sound-and-video" "*internet" "window-managers" "virtualization" "tomcat"
+"ruby" "rubyonrails" "php" "python*" "ocaml" "mongodb" "mysql" "mingw32"
+"mate*" "perl*" "java*" "graphics" "haskell" "eclipse" "fedora-packager"
+"design-suite" "lxqt*" "lxde*" "input-methods" "deepin*" "critical*"
+"xmonad*" "sugar*" "pantheon-desktop")
 
 echo "${groups}"
 
@@ -95,19 +104,20 @@ done
 
 declare -a packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*"
 "guake*" "*gimp*" "gh" "hub" "*apache*" "sbt" "*7z*" "*xz*" "gzip*" "gedit*"
-"geany*" "bzip2*" "*brotli*" "lzop*" "zstd*" "fzf*" "vtk*" "maven*" "ant*"
+"geany*" "bzip2*" "*brotli*" "lzop*" "zstd*" "fzf*" "maven*" "ant*" "tex*"
 "*java*" "code" "rust*" "google-*-fonts" "fira-code-fonts" "cascadia-*" "*zsh*"
-"jetbrains-mono-*" "neofetch" "htop" "virtualbox*" "gparted" "vlc" "mpv" "*perl*"
-"gimp*" "haroopad" "ffmpeg*" "fftw*" "gstreamer*" "timeshift*" "lame*" "cmake*"
-"*gdb*" "*keyring*" "dotnet5*" "bat" "dotnet-sdk*" "*gtk*" "*atk*" "*vtk*" "*wx*"
-"ruby-*" "*sdl*" "*SDL*" "glfw-*" "mpfr-*" "cloog-*" "isl-*" "tex*" "make" "gmp-*"
-"bison*" "libmpc-*" "flex*" "ccache*" "R-*" "*mingw*" "node*" "pip*" "npm*" "*dnf*"
-"*gcc*" "*ldc*" "*ghc*" "mono*" "*coreutil*" "*binutil*" "*qemu*" "*mscore*" "*php*"
-"*pypy*" "vscodium" "*rpm*" "*curl*" "*kleo*" "fedy" "inkscape*" "scribus*" "wine*"
-"*aria*" "aspell*" "*lua*" "*clamav*" "klamav" "*sassc*" "*clang*" "*allegro*"
-"*llvm*" "*boost*" "*golang*" "*gawk*" "*expat*" "*fftw*" "*erlang*" "*Gtk*"
-"ncurses*" "*ocaml*" "PackageKit*" "*codeblocks*" "*mysql*" "*dbus*" "*glib*"
-"*fluidsynth*" "*flac*" "*glade*" "*ibus*" "*lame*" "*zlib*" "*nautilus*")
+"jetbrains-mono-*" "neofetch" "htop" "virtualbox*" "gparted" "vlc" "mpv"
+"*perl*" "gimp*" "haroopad" "ffmpeg*" "fftw*" "gstreamer*" "timeshift*" "lame*"
+"cmake*" "*gdb*" "*keyring*" "dotnet5*" "bat" "dotnet-sdk*" "*gtk*" "*atk*"
+"*vtk*" "*wx*" "ruby-*" "*sdl*" "*SDL*" "glfw-*" "mpfr-*" "cloog-*" "isl-*"
+"make" "gmp-*" "bison*" "libmpc-*" "flex*" "ccache*" "R-*" "*mingw*" "node*"
+"pip*" "npm*" "*dnf*" "*gcc*" "*ldc*" "*ghc*" "mono*" "*coreutil*" "*binutil*"
+"*qemu*" "*mscore*" "*php*" "*pypy*" "vscodium" "*rpm*" "*curl*" "*kleo*"
+"fedy" "inkscape*" "scribus*" "wine*" "*aria*" "aspell*" "*lua*" "*clamav*"
+"klamav" "*sassc*" "*clang*" "*allegro*" "*llvm*" "*boost*" "*golang*" "*gawk*"
+"*expat*" "*fftw*" "*erlang*" "*Gtk*" "ncurses*" "*ocaml*" "PackageKit*"
+"*codeblocks*" "*mysql*" "*dbus*" "*glib*" "*fluidsynth*" "*flac*" "*glade*"
+"*ibus*" "*lame*" "*zlib*" "*nautilus*")
 
 echo "${packages}"
 
