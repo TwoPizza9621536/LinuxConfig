@@ -99,7 +99,7 @@ for val in "${groups[@]}"; do
   dnf group install --with-optional $val -b --allowerasing --skip-broken -y
 done
 
-packages=("*qt*" "*kf*" "*kde*" "gnome*" "optipng*" "keybinder*" "guake*" "*gimp*"
+packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*" "guake*" "*gimp*"
 "gh" "hub" "*apache*" "sbt" "*7z*" "*xz*" "gzip*" "gedit*" "geany*" "bzip2*"
 "*brotli*" "lzop*" "zstd*" "fzf*" "vtk*" "maven*" "ant*" "*java*" "code" "rust*"
 "google-*-fonts" "fira-code-fonts" "cascadia-*" "jetbrains-mono-*" "neofetch"
