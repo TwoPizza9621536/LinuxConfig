@@ -85,7 +85,7 @@ dnf copr enable rpmsoftwaremanagement/dnf-nightly
 
 dnf update --refresh -y
 
-groups=("GNOME Desktop Environment" "Fedora Workstation"
+declare -a groups=("GNOME Desktop Environment" "Fedora Workstation"
 "Authoring and Publishing" "C Development Tools and Libraries"
 "Container Management" "D Development Tools and Libraries" "Design Suite"
 "Development Tools" "Fedora Eclipse" "Editors" "Educational Software" "Fonts"
@@ -95,32 +95,33 @@ groups=("GNOME Desktop Environment" "Fedora Workstation"
 "Sound and Video" "System Tools" "KDE Plasma Workspaces" "Minimal Install"
 "Development and Creative Workstation" "Basic Desktop" "Audio Production"
 "Xfce Desktop" "Fedora Custom Operating System" "MATE Applications")
+
+echo "${groups}"
+
 for val in "${groups[@]}"; do
   dnf group install --with-optional $val -b --allowerasing --skip-broken -y
 done
 
-packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*" "guake*" "*gimp*"
-"gh" "hub" "*apache*" "sbt" "*7z*" "*xz*" "gzip*" "gedit*" "geany*" "bzip2*"
-"*brotli*" "lzop*" "zstd*" "fzf*" "vtk*" "maven*" "ant*" "*java*" "code" "rust*"
-"google-*-fonts" "fira-code-fonts" "cascadia-*" "jetbrains-mono-*" "neofetch"
-"htop" "virtualbox*" "gparted" "vlc" "mpv" "gimp*" "haroopad" "ffmpeg*" "fftw*"
-"gstreamer*" "timeshift*" "lame*" "cmake*" "*gdb*" "*keyring*" "dotnet5*" "bat"
-"dotnet-sdk*" "*gtk*" "*atk*" "*vtk*" "*wx*" "ruby-*" "*sdl*" "*SDL*" "glfw-*"
-"mpfr-*" "cloog-*" "isl-*" "tex*" "make" "bison*" "gmp-*" "libmpc-*" "flex*"
-"ccache*" "R-*" "*mingw*" "node*" "pip*" "npm*" "*gcc*" "*ldc*" "*ghc*" "mono*"
-"*coreutil*" "*binutil*" "*zsh*" "*dnf*" "*qemu*" "*mscore*" "*pypy*" "vscodium"
-"*rpm*" "*curl*" "*kleo*" "fedy" "inkscape*" "scribus*" "wine*" "*aria*" "aspell*"
-"*lua*" "*clamav*" "klamav" "*sassc*" "*clang*" "*allegro*" "*llvm*" "*boost*"
-"*perl*" "*php*" "*golang*" "*gawk*" "*expat*" "*fftw*" "*erlang*" "*Gtk*"
+declare -a packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*"
+"guake*" "*gimp*" "gh" "hub" "*apache*" "sbt" "*7z*" "*xz*" "gzip*" "gedit*"
+"geany*" "bzip2*" "*brotli*" "lzop*" "zstd*" "fzf*" "vtk*" "maven*" "ant*"
+"*java*" "code" "rust*" "google-*-fonts" "fira-code-fonts" "cascadia-*" "*zsh*"
+"jetbrains-mono-*" "neofetch" "htop" "virtualbox*" "gparted" "vlc" "mpv" "*perl*"
+"gimp*" "haroopad" "ffmpeg*" "fftw*" "gstreamer*" "timeshift*" "lame*" "cmake*"
+"*gdb*" "*keyring*" "dotnet5*" "bat" "dotnet-sdk*" "*gtk*" "*atk*" "*vtk*" "*wx*"
+"ruby-*" "*sdl*" "*SDL*" "glfw-*" "mpfr-*" "cloog-*" "isl-*" "tex*" "make" "gmp-*"
+"bison*" "libmpc-*" "flex*" "ccache*" "R-*" "*mingw*" "node*" "pip*" "npm*" "*dnf*"
+"*gcc*" "*ldc*" "*ghc*" "mono*" "*coreutil*" "*binutil*" "*qemu*" "*mscore*" "*php*"
+"*pypy*" "vscodium" "*rpm*" "*curl*" "*kleo*" "fedy" "inkscape*" "scribus*" "wine*"
+"*aria*" "aspell*" "*lua*" "*clamav*" "klamav" "*sassc*" "*clang*" "*allegro*"
+"*llvm*" "*boost*" "*golang*" "*gawk*" "*expat*" "*fftw*" "*erlang*" "*Gtk*"
 "ncurses*" "*ocaml*" "PackageKit*" "*codeblocks*" "*mysql*" "*dbus*" "*glib*"
 "*fluidsynth*" "*flac*" "*glade*" "*ibus*" "*lame*" "*zlib*")
+
+echo "${packages}"
+
 for val in "${packages[@]}"; do
   dnf install $val -b --allowerasing --skip-broken -y
-done
-
-addionalpkgs=("*qt*" "*kf*" "*kde*")
-for val in "${addionalpkgs[@]}"; do
-  dnf install $val -b --allowerasing --skip-broken -x *lib* -y
 done
 
 dnf install *VirtualBox* -x VirtualBox-6.1 -y
