@@ -85,15 +85,15 @@ dnf copr enable rpmsoftwaremanagement/dnf-nightly
 
 dnf update refresh -y
 
-groups=("Administration Tools" "Audio Production" "Multimedia"
+groups=("GNOME Desktop Environment" "Fedora Workstation"
 "Authoring and Publishing" "C Development Tools and Libraries"
 "Container Management" "D Development Tools and Libraries" "Design Suite"
 "Development Tools" "Fedora Eclipse" "Editors" "Educational Software" "Fonts"
 "LibreOffice" "Office/Productivity" "Python Classroom" "Python Science"
-"Text-based Internet" "Window Managers" "GNOME Desktop Environment"
+"Text-based Internet" "Window Managers" "Multimedia" "Administration Tools"
 "Graphical Internet" "KDE (K Desktop Environment)" "Games and Entertainment"
 "Sound and Video" "System Tools" "KDE Plasma Workspaces" "Minimal Install"
-"Development and Creative Workstation" "Basic Desktop" "Fedora Workstation"
+"Development and Creative Workstation" "Basic Desktop" "Audio Production"
 "Xfce Desktop" "Fedora Custom Operating System" "MATE Applications")
 for val in "${groups[@]}"; do
   dnf group install --with-optional $val -b --allowerasing --skip-broken -y
