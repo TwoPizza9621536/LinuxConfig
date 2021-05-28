@@ -22,7 +22,7 @@ else
   echo 'max_parallel_downloads=10' | tee -a /etc/dnf/dnf.conf
   echo 'deltarpm=true' | tee -a /etc/dnf/dnf.conf
   echo 'repo_gpgcheck=1' | tee -a /etc/dnf/dnf.conf
-if
+fi
 
 if ! type powertop >/dev/null 2>&1; then
   printf '%s\n' "${blue}Powertop is not installed! Installing it...$ncolor"
