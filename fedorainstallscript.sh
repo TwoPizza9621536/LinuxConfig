@@ -85,16 +85,7 @@ dnf copr enable rpmsoftwaremanagement/dnf-nightly
 
 dnf update --refresh -y
 
-declare -a groups=("GNOME Desktop Environment" "Fedora Workstation"
-"Authoring and Publishing" "C Development Tools and Libraries"
-"Container Management" "D Development Tools and Libraries" "Design Suite"
-"Development Tools" "Fedora Eclipse" "Editors" "Educational Software" "Fonts"
-"LibreOffice" "Office/Productivity" "Python Classroom" "Python Science"
-"Text-based Internet" "Window Managers" "Multimedia" "Administration Tools"
-"Graphical Internet" "KDE (K Desktop Environment)" "Games and Entertainment"
-"Sound and Video" "System Tools" "KDE Plasma Workspaces" "Minimal Install"
-"Development and Creative Workstation" "Basic Desktop" "Audio Production"
-"Xfce Desktop" "Fedora Custom Operating System" "MATE Applications")
+declare -a groups=(gnome* workstation-product-environment custom-environment i3* basic* kde* xfce* anaconda-tools base-x firefox libreoffice workstation-product x86-baremetal-tools multimedia core *fonts* hardware-support admin-tools audio authoring-and-publishing basic-desktop buildsys-build cinnamon* developer-workstation-environment *development* system-tools sound-and-video games kde-desktop graphical-internet window-managers virtualization tomcat standard ruby rubyonrails php python* ocaml mongodb mysql mingw32 mate* perl* java* graphics haskell eclipse fedora-packager design-suite)
 
 echo "${groups}"
 
