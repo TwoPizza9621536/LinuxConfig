@@ -83,7 +83,7 @@ dnf copr enable kwizart/fedy
 
 dnf copr enable rpmsoftwaremanagement/dnf-nightly
 
-dnf update refresh -y
+dnf update --refresh -y
 
 groups=("GNOME Desktop Environment" "Fedora Workstation"
 "Authoring and Publishing" "C Development Tools and Libraries"
