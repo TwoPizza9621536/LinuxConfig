@@ -116,7 +116,7 @@ declare -a packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*"
 "*aria*" "aspell*" "*lua*" "*clamav*" "klamav" "*sassc*" "*clang*" "*allegro*"
 "*llvm*" "*boost*" "*golang*" "*gawk*" "*expat*" "*fftw*" "*erlang*" "*Gtk*"
 "ncurses*" "*ocaml*" "PackageKit*" "*codeblocks*" "*mysql*" "*dbus*" "*glib*"
-"*fluidsynth*" "*flac*" "*glade*" "*ibus*" "*lame*" "*zlib*")
+"*fluidsynth*" "*flac*" "*glade*" "*ibus*" "*lame*" "*zlib*" "*nautilus*")
 
 echo "${packages}"
 
