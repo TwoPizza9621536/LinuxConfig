@@ -99,18 +99,21 @@ for val in "${groups[@]}"; do
   dnf group install --with-optional $val -b --allowerasing --skip-broken -y
 done
 
-packages=("qt*" "kf*" "kde*" "gnome*" "optipng*" "keybinder*" "guake*" "glade*"
-"gh" "hub" "*apache*" "sbt" "*7z*" "xz*" "gzip*" "gedit*" "geany*" "bzip2*"
-"brotli*" "lzop*" "zstd*" "fzf*" "vtk*" "maven*" "ant*" "*java*" "code" "rust*"
+packages=("*qt*" "*kf*" "*kde*" "gnome*" "optipng*" "keybinder*" "guake*" "*gimp*"
+"gh" "hub" "*apache*" "sbt" "*7z*" "*xz*" "gzip*" "gedit*" "geany*" "bzip2*"
+"*brotli*" "lzop*" "zstd*" "fzf*" "vtk*" "maven*" "ant*" "*java*" "code" "rust*"
 "google-*-fonts" "fira-code-fonts" "cascadia-*" "jetbrains-mono-*" "neofetch"
 "htop" "virtualbox*" "gparted" "vlc" "mpv" "gimp*" "haroopad" "ffmpeg*" "fftw*"
 "gstreamer*" "timeshift*" "lame*" "cmake*" "gdb*" "*keyring*" "dotnet5*" "bat"
-"dotnet-sdk*" "gtk*" "wx*" "ruby-*" "SDL*" "glfw-*" "allegro-*" "llvm*" "clang*"
+"dotnet-sdk*" "*gtk*" "*atk*" "*vtk*" "*wx*" "ruby-*" "*sdl*" "*SDL*" "glfw-*"
 "mpfr-*" "cloog-*" "isl-*" "tex*" "make" "bison*" "gmp-*" "libmpc-*" "flex*"
-"ccache*" "R-*" "mingw*" "node*" "pip*" "npm*" "gcc*" "ldc*" "ghc*" "mono*"
-"coreutil*" "binutil*" "zsh*" "dnf*" "qemu*" "mscore*" "pypy*" "vscodium"
-"*rpm*" "*curl*" "*kleo*" "fedy" "inkscape*" "scribus*" "wine*" "aria*"
-"lua*" "*clamav*" "klamav" "*sassc*")
+"ccache*" "R-*" "*mingw*" "node*" "pip*" "npm*" "*gcc*" "*ldc*" "*ghc*" "mono*"
+"*coreutil*" "*binutil*" "*zsh*" "*dnf*" "*qemu*" "*mscore*" "*pypy*" "vscodium"
+"*rpm*" "*curl*" "*kleo*" "fedy" "inkscape*" "scribus*" "wine*" "*aria*" "aspell*"
+"*lua*" "*clamav*" "klamav" "*sassc*" "*clang*" "*allegro*" "*llvm*" "*boost*"
+"*perl*" "*php*" "*golang*" "*gawk*" "*expat*" "*fftw*" "*erlang*" "*Gtk*"
+"ncurses*" "*ocaml*" "PackageKit*" "*codeblocks*" "*mysql*" "*dbus*" "*glib*"
+"*fluidsynth*" "*flac*" "*glade*" "*ibus*" "*lame*" "*zlib*")
 for val in "${packages[@]}"; do
   dnf install $val -b --allowerasing --skip-broken -y
 done
@@ -121,11 +124,6 @@ for val in "${addionalpkgs[@]}"; do
 done
 
 dnf install *VirtualBox* -x VirtualBox-6.1 -y
-
-dnf install *lib* -b --allowerasing --skip-broken -x libcouchbase-tools -x \
-xorg-x11-drv-nvidia-390xx-libs -x glibc-headers-s390 -x \
-xorg-x11-drv-nvidia-390xx-cuda-libs -x libblocksruntime-devel -x \
-xorg-x11-drv-nvidia-340xx-libs -x librcc -y
 
 dnf install git* -b --allowerasing --skip-broken -x git-pull-request -y
 
