@@ -104,7 +104,7 @@ packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*" "guake*" "*gim
 "*brotli*" "lzop*" "zstd*" "fzf*" "vtk*" "maven*" "ant*" "*java*" "code" "rust*"
 "google-*-fonts" "fira-code-fonts" "cascadia-*" "jetbrains-mono-*" "neofetch"
 "htop" "virtualbox*" "gparted" "vlc" "mpv" "gimp*" "haroopad" "ffmpeg*" "fftw*"
-"gstreamer*" "timeshift*" "lame*" "cmake*" "gdb*" "*keyring*" "dotnet5*" "bat"
+"gstreamer*" "timeshift*" "lame*" "cmake*" "*gdb*" "*keyring*" "dotnet5*" "bat"
 "dotnet-sdk*" "*gtk*" "*atk*" "*vtk*" "*wx*" "ruby-*" "*sdl*" "*SDL*" "glfw-*"
 "mpfr-*" "cloog-*" "isl-*" "tex*" "make" "bison*" "gmp-*" "libmpc-*" "flex*"
 "ccache*" "R-*" "*mingw*" "node*" "pip*" "npm*" "*gcc*" "*ldc*" "*ghc*" "mono*"
