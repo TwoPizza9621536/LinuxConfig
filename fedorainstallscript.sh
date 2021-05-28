@@ -26,7 +26,7 @@ fi
 
 if ! type powertop >/dev/null 2>&1; then
   printf '%s\n' "${blue}Powertop is not installed! Installing it...$ncolor"
-  dnf -y powertop
+  dnf install powertop -y
   systemctl enable powertop.service
 else
   systemctl enable powertop.service
