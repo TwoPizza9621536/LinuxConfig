@@ -137,4 +137,3 @@ dnf autoremove -y
 dnf remove --duplicates -y
 
 dnf clean packages
-
