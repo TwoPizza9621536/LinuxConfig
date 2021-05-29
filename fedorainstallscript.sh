@@ -114,7 +114,7 @@ declare -a packages=("*qt*" "*kf*" "*kde*" "*gnome*" "optipng*" "keybinder*"
 "klamav" "*sassc*" "*clang*" "*allegro*" "*llvm*" "*boost*" "*golang*" "*gawk*"
 "*expat*" "*fftw*" "*erlang*" "*Gtk*" "ncurses*" "*ocaml*" "PackageKit*"
 "*codeblocks*" "*mysql*" "*dbus*" "*glib*" "*fluidsynth*" "*flac*" "*glade*"
-"*ibus*" "*lame*" "*zlib*" "*nautilus*")
+"*ibus*" "*lame*" "*zlib*" "*nautilus*" "*yum*")
 for val in "${packages[@]}"; do
   dnf install $val -b --allowerasing --skip-broken -y
 done
