@@ -59,10 +59,10 @@ set constantshow
 # set fill -8
 
 ## Remember the used search/replace strings for the next session.
-# set historylog
+set historylog
 
 ## Display a "scrollbar" on the righthand side of the edit window.
-# set indicator
+set indicator
 
 ## Scroll the buffer contents per half-screen instead of per line.
 # set jumpyscrolling
@@ -94,7 +94,7 @@ set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
-# set multibuffer
+set multibuffer
 
 ## Don't convert files from DOS/Mac format.
 # set noconvert
@@ -178,7 +178,7 @@ set tabsize 4
 set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
-# set trimblanks
+set trimblanks
 
 ## The two single-column characters used to display the first characters
 ## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
@@ -299,4 +299,3 @@ bind M-U undo main
 bind M-R redo main
 bind ^U undo main
 bind ^E redo main
-set multibuffer
